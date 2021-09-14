@@ -1,0 +1,14 @@
+# Ejemplo 2: Aclaraciones de scope
+x = 15;
+global y = 44;
+function ejemplo2()
+ #JOLC en la asignación no toma la variable global, crea una nueva.
+   global y=y;
+   y = 5;
+println(x); #JOLC en la llamada a una variable SI busca en el entorno local y luego
+
+end;
+ejemplo2();
+println(x);
+println(y);
+
